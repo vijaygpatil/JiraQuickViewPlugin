@@ -1,0 +1,61 @@
+.linker {
+  min-height: 20px;
+  padding: 20px;
+  height: 400px;
+  overflow: scroll;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.descriptionDiv {
+	min-height: 10px;
+	padding: 9px;
+	margin-bottom: 5px;
+	border: 1px solid #e3e3e3;
+	border-radius: 4px;
+  	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.commentDiv {
+	min-height: 10px;
+	padding: 9px;
+	margin-bottom: 10px;
+	border: 1px solid #e3e3e3;
+	border-radius: 4px;
+  	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.borderless td, th {
+    border: none !important;
+    margin-bottom: 0;
+}
+
+.borderless {
+    margin-bottom: 0;
+}
+
+.watch {
+	display: hide;
+}
+
+.unwatch {
+	display: hide;
+}
+
+.saveComment {
+	display: none;
+}
+
+.descriptionTextArea {
+	border: none !important;
+}
+
+.commentTable {
+	margin-bottom: 10px;
+}
+
+.linker .detailsTable th {
+	width: 100px;
+}

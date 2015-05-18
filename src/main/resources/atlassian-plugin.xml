@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+  <plugin-info>
+    <description>${project.description}</description>
+    <version>${project.version}</version>
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+    <param name="plugin-icon">images/pluginIcon.png</param>
+    <param name="plugin-logo">images/pluginLogo.png</param>
+  </plugin-info>
+  <!-- add our i18n resource -->
+  <resource type="i18n" name="i18n" location="jiraQuickViewPlugin"/>
+  <!-- add our web resources -->
+  <web-resource key="jiraQuickViewPlugin-resources" name="jiraQuickViewPlugin Web Resources">
+    <dependency>com.atlassian.auiplugin:ajs</dependency>
+    <resource type="download" name="jiraQuickViewPlugin.css" location="/css/jiraQuickViewPlugin.css"/>
+    <resource type="download" name="jiraQuickViewPlugin.js" location="/js/jiraQuickViewPlugin.js"/>
+    <resource type="download" name="images/" location="/images"/>
+    <context>jiraQuickViewPlugin</context>
+  </web-resource>
+  <!-- publish our component -->
+  <component key="myPluginComponent" class="com.garmin.g3.jiraQuickViewPlugin.MyPluginComponentImpl" public="true">
+    <interface>com.garmin.g3.jiraQuickViewPlugin.MyPluginComponent</interface>
+  </component>
+  <!-- import from the product container -->
+  <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties"/>
+  <web-resource name="Jira Quick View" i18n-name-key="jira-quick-view.name" key="jira-quick-view">
+    <description key="jira-quick-view.description">The Jira Quick View Plugin</description>
+    <resource name="jquery.min.js" type="download" location="js/jquery.min.js"/>
+    <resource name="jquery.min.map" type="download" location="js/jquery.min.map"/>
+    <resource name="bootstrap.min.js" type="download" location="js/bootstrap.min.js"/>
+    <resource name="bootstrap.min.css" type="download" location="css/bootstrap.min.css"/>
+    <resource name="jiraQuickViewPlugin.css" type="download" location="css/jiraQuickViewPlugin.css"/>
+    <resource name="jiraQuickViewPlugin.js" type="download" location="js/jiraQuickViewPlugin.js"/>
+     <resource name="jquery.browser.min.js" type="download" location="js/jquery.browser.min.js"/>
+    <context>jira.view.issue</context>
+    <context>jira.dashboard</context>
+    <context>atl.admin</context>
+  </web-resource>
+</atlassian-plugin>
